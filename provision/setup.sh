@@ -1,5 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
 
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install nginx php5-fpm php5-mysql -y
@@ -16,6 +15,3 @@ sudo service php5-fpm restart
 # set MariaDB password - toor
 # MySQL create data base, create user
 # mysql -u root -p -e 'create database bugwiser; CREATE USER 'bugwiser'@'localhost' IDENTIFIED BY 'bugwiser';GRANT ALL PRIVILEGES ON bugwiser.* TO 'bugwiser'@'%' WITH GRANT OPTION;flush privileges;'
-=======
-echo "Provisioning virtual machine..."
->>>>>>> d3b0b4a49b30298c3b9f7de00efee81f4b3d4f10
