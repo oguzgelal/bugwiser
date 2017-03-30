@@ -1,9 +1,6 @@
 # Vagrant
 
 ## Commands
-- create a vagrant instance
-> vagrant init
-
 - start a vagrant instance
 > vagrant up
 
@@ -13,27 +10,23 @@
 - ssh on the vagrant instance
 > vagrant ssh
 
-## VagrantFile
+## ./provision/setup.sh contains all that we need to install on the box
+- !!! Install MariaDB after you already started the machine because you cannot introduce the password for mysql when vagrant is running the setup script !!!
+- you will find the commands for installing MariaDB in setup.sh
+
+# Passwords
+- is not secure to keep them here, anyway, use these passwords:
 ```
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-Vagrant.configure("2") do |config|
-  config.vm.box = "primalskill/ubuntu-trusty64"
-
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-
-  config.vm.synced_folder "./", "/var/www", create: true, group: "www-data", owner: "www-data"
-
-  config.vm.network "private_network", ip: "192.168.11.11"
-
-  config.vm.provider "virtualbox" do |v|
-  	v.name = "SitePoint Test Vagrant"
-  	v.customize ["modifyvm", :id, "--memory", "1024"]
-  end
-
-  config.vm.provision "shell" do |s|
-    s.path "provision/setup.sh"
-  end
-end
+For MariaDB: user:bugwiser / password:bugwiser
+For WP-Admin: user:bugwiser / password:8ug$1$3r@dm1n
 ```
+
+# WP REST API Plugin
+- https://wordpress.org/plugins/json-rest-api/#installation
+
+# Permalinks
+- https://wordpress.org/support/topic/404-error-and-permalinks-1/
+- http://nginxlibrary.com/wordpress-permalinks/
+
+# Nice link
+- https://premium.wpmudev.org/blog/twenty-seventeen-wordpress-theme/
