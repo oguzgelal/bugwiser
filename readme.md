@@ -20,3 +20,13 @@
 For MariaDB: user:bugwiser / password:bugwiser
 For WP-Admin: user:bugwiser / password:8ug$1$3r@dm1n
 ```
+
+# WP REST API Plugin
+- https://wordpress.org/plugins/json-rest-api/#installation
+
+# Permalinks
+- https://wordpress.org/support/topic/404-error-and-permalinks-1/
+- http://nginxlibrary.com/wordpress-permalinks/
+
+# Nice link
+- https://premium.wpmudev.org/blog/twenty-seventeen-wordpress-theme/
